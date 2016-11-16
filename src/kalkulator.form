@@ -203,16 +203,25 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="8"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="tombol8ActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="tombol7">
       <Properties>
         <Property name="text" type="java.lang.String" value="7"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="tombol7ActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="tombol9">
       <Properties>
         <Property name="text" type="java.lang.String" value="9"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="tombol9ActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="tombolsamadengan">
       <Properties>
