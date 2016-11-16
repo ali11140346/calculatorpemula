@@ -120,10 +120,25 @@ public class kalkulator extends javax.swing.JFrame {
         tombolbagi.setText("/");
 
         tombol0.setText("0");
+        tombol0.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tombol0ActionPerformed(evt);
+            }
+        });
 
         tomboltitik.setText(".");
+        tomboltitik.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tomboltitikActionPerformed(evt);
+            }
+        });
 
         tombolC.setText("C");
+        tombolC.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tombolCActionPerformed(evt);
+            }
+        });
 
         jTextField1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -267,6 +282,24 @@ public class kalkulator extends javax.swing.JFrame {
         angka +="9";
         jTextField1.setText(angka);
     }//GEN-LAST:event_tombol9ActionPerformed
+
+    private void tomboltitikActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tomboltitikActionPerformed
+       angka +=".";
+        jTextField1.setText(angka);
+    }//GEN-LAST:event_tomboltitikActionPerformed
+
+    private void tombol0ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tombol0ActionPerformed
+        angka +="0";
+        jTextField1.setText(angka);
+    }//GEN-LAST:event_tombol0ActionPerformed
+
+    private void tombolCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tombolCActionPerformed
+        jTextField1.setText("");
+        angka1=0.0;
+        angka2=0.0;
+        jumlah=0.0;
+        angka="";
+    }//GEN-LAST:event_tombolCActionPerformed
 
     /**
      * @param args the command line arguments
