@@ -66,8 +66,18 @@ public class kalkulator extends javax.swing.JFrame {
         });
 
         tombolplus.setText("+");
+        tombolplus.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tombolplusActionPerformed(evt);
+            }
+        });
 
         tombolmin.setText("-");
+        tombolmin.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tombolminActionPerformed(evt);
+            }
+        });
 
         tombol6.setText("6");
         tombol6.addActionListener(new java.awt.event.ActionListener() {
@@ -91,6 +101,11 @@ public class kalkulator extends javax.swing.JFrame {
         });
 
         tombolkali.setText("X");
+        tombolkali.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tombolkaliActionPerformed(evt);
+            }
+        });
 
         tombolplusmin.setText("+/-");
 
@@ -116,8 +131,18 @@ public class kalkulator extends javax.swing.JFrame {
         });
 
         tombolsamadengan.setText("=");
+        tombolsamadengan.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tombolsamadenganActionPerformed(evt);
+            }
+        });
 
         tombolbagi.setText("/");
+        tombolbagi.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tombolbagiActionPerformed(evt);
+            }
+        });
 
         tombol0.setText("0");
         tombol0.addActionListener(new java.awt.event.ActionListener() {
@@ -152,8 +177,8 @@ public class kalkulator extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(14, 14, 14)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jTextField1)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 242, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addGroup(layout.createSequentialGroup()
                             .addComponent(tombol4, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -198,9 +223,9 @@ public class kalkulator extends javax.swing.JFrame {
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(39, 39, 39)
+                .addGap(22, 22, 22)
                 .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addGap(35, 35, 35)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(tombol1, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(tombol2, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -300,6 +325,65 @@ public class kalkulator extends javax.swing.JFrame {
         jumlah=0.0;
         angka="";
     }//GEN-LAST:event_tombolCActionPerformed
+
+    private void tombolplusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tombolplusActionPerformed
+        angka1=Double.parseDouble(angka);
+        jTextField1.setText("+");
+        angka="";
+        pilihan=1;
+    }//GEN-LAST:event_tombolplusActionPerformed
+
+    private void tombolminActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tombolminActionPerformed
+        angka1=Double.parseDouble(angka);
+        jTextField1.setText("-");
+        angka="";
+        pilihan=2;
+    }//GEN-LAST:event_tombolminActionPerformed
+
+    private void tombolkaliActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tombolkaliActionPerformed
+        angka1=Double.parseDouble(angka);
+        jTextField1.setText("X");
+        angka="";
+        pilihan=3;
+    }//GEN-LAST:event_tombolkaliActionPerformed
+
+    private void tombolbagiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tombolbagiActionPerformed
+        angka1=Double.parseDouble(angka);
+        jTextField1.setText("/");
+        angka="";
+        pilihan=4;
+    }//GEN-LAST:event_tombolbagiActionPerformed
+
+    private void tombolsamadenganActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tombolsamadenganActionPerformed
+        switch(pilihan){
+        case 1:
+            angka2 = Double.parseDouble(angka);
+            jumlah = angka1 + angka2;
+            angka = Double.toString(jumlah);
+            jTextField1.setText(angka);
+            break;
+        case 2:
+            angka2 = Double.parseDouble(angka);
+            jumlah = angka1 - angka2;
+            angka = Double.toString(jumlah);
+            jTextField1.setText(angka);
+            break;
+        case 3:
+            angka2 = Double.parseDouble(angka);
+            jumlah = angka1 * angka2;
+            angka = Double.toString(jumlah);
+            jTextField1.setText(angka);
+            break;
+        case 4:
+            angka2 = Double.parseDouble(angka);
+            jumlah = angka1 / angka2;
+            angka = Double.toString(jumlah);
+            jTextField1.setText(angka);
+            break;
+            default:
+            break;
+    }
+    }//GEN-LAST:event_tombolsamadenganActionPerformed
 
     /**
      * @param args the command line arguments
