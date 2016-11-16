@@ -108,6 +108,11 @@ public class kalkulator extends javax.swing.JFrame {
         });
 
         tombolplusmin.setText("+/-");
+        tombolplusmin.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tombolplusminActionPerformed(evt);
+            }
+        });
 
         tombol8.setText("8");
         tombol8.addActionListener(new java.awt.event.ActionListener() {
@@ -384,6 +389,11 @@ public class kalkulator extends javax.swing.JFrame {
             break;
     }
     }//GEN-LAST:event_tombolsamadenganActionPerformed
+
+    private void tombolplusminActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tombolplusminActionPerformed
+        angka +="-";
+        jTextField1.setText(angka);
+    }//GEN-LAST:event_tombolplusminActionPerformed
 
     /**
      * @param args the command line arguments
