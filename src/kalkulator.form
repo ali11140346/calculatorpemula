@@ -169,16 +169,25 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="6"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="tombol6ActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="tombol5">
       <Properties>
         <Property name="text" type="java.lang.String" value="5"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="tombol5ActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="tombol4">
       <Properties>
         <Property name="text" type="java.lang.String" value="4"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="tombol4ActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="tombolkali">
       <Properties>

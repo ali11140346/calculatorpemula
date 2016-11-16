@@ -70,10 +70,25 @@ public class kalkulator extends javax.swing.JFrame {
         tombolmin.setText("-");
 
         tombol6.setText("6");
+        tombol6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tombol6ActionPerformed(evt);
+            }
+        });
 
         tombol5.setText("5");
+        tombol5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tombol5ActionPerformed(evt);
+            }
+        });
 
         tombol4.setText("4");
+        tombol4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tombol4ActionPerformed(evt);
+            }
+        });
 
         tombolkali.setText("X");
 
@@ -207,6 +222,21 @@ public class kalkulator extends javax.swing.JFrame {
         angka +="3";
         jTextField1.setText(angka);
     }//GEN-LAST:event_tombol3ActionPerformed
+
+    private void tombol4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tombol4ActionPerformed
+        angka +="4";
+        jTextField1.setText(angka);
+    }//GEN-LAST:event_tombol4ActionPerformed
+
+    private void tombol5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tombol5ActionPerformed
+        angka +="5";
+        jTextField1.setText(angka);
+    }//GEN-LAST:event_tombol5ActionPerformed
+
+    private void tombol6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tombol6ActionPerformed
+        angka +="6";
+        jTextField1.setText(angka);
+    }//GEN-LAST:event_tombol6ActionPerformed
 
     /**
      * @param args the command line arguments
