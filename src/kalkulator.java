@@ -45,10 +45,25 @@ public class kalkulator extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         tombol1.setText("1");
+        tombol1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tombol1ActionPerformed(evt);
+            }
+        });
 
         tombol2.setText("2");
+        tombol2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tombol2ActionPerformed(evt);
+            }
+        });
 
         tombol3.setText("3");
+        tombol3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tombol3ActionPerformed(evt);
+            }
+        });
 
         tombolplus.setText("+");
 
@@ -177,6 +192,21 @@ public class kalkulator extends javax.swing.JFrame {
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField1ActionPerformed
+
+    private void tombol1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tombol1ActionPerformed
+        angka +="1";
+        jTextField1.setText(angka);
+    }//GEN-LAST:event_tombol1ActionPerformed
+
+    private void tombol2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tombol2ActionPerformed
+        angka +="2";
+        jTextField1.setText(angka);
+    }//GEN-LAST:event_tombol2ActionPerformed
+
+    private void tombol3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tombol3ActionPerformed
+        angka +="3";
+        jTextField1.setText(angka);
+    }//GEN-LAST:event_tombol3ActionPerformed
 
     /**
      * @param args the command line arguments
